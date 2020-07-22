@@ -1,38 +1,63 @@
-.App {
+.list{color: white;
+      width: 300px;
+      background-color: #bf07ac;
+      height: 50px;
+      margin: 20px auto;
+      border-radius: 5px;
+      list-style-type: none;
+      padding: 10px;
+      font-family:Arial Narrow;
+      font-size: larger;
+
+}
+.App{background-color: #3f3160;
+     min-height: 500px;
+     width: 400px;
+     margin: 40px auto;
+
+}
+ input{background-color: rgb(27, 112, 137);
+       border:0;
+       width:150px;
+       height: 50px;
+       padding: 0 20px;
+       margin: 20px;
+       font-size:18px;
+       border-radius:10px;
+       color: #fff;
+
+
+}
+input:focus{
+  outline: none;
+}
+#add-button{height: 50px;
+       width:80px;
+       border-radius:5px;
+       border:0px;
+       background-color: rgb(202, 156, 24);
+       cursor: pointer;
+       color: #fff;
+
+}
+#delete-button{background: transparent;
+  border: 1px solid white;
+  border-radius: 2em;
+  color:white;
+  display: inline-block;
+  font-size: 12px;
+  height: 20px;
+  line-height: 2px;
+  margin:0 0 250px;
+  margin-left: 280px;
+  padding: 0;
   text-align: center;
+  width: 20px;
+  
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#delete-button:focus{
+  outline: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#add-button:focus{
+  outline: none;
 }
