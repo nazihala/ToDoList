@@ -12,9 +12,14 @@ function App() {
   }
   const addTasks=(e)=>{
     e.preventDefault();
-    SetTasks([...tasks,{name:mytask}]);
+    SetTasks([...tasks,{name:mytask, key:tasks.length}]);
     SetMytask("")
+  
   };
+  const deleteTasks=(key)=>{
+    const newtasks=tasks.filter(task=>task.key!==key);
+    SetTasks({tasks:newtasks})
+  }
  
 
   
@@ -25,12 +30,14 @@ function App() {
         <button id="add-button" type="submit">Add task</button>
       </form>
       <ul className="unlist">
-        {tasks.map((task)=>(
-          <li className="list">{task.name}
-          <button id="delete-button"> X </button>
-        </li>
-        ))}
+        {tasks.map((task)=>
+            <li className="list" key={task.key}>{task.name}
+              <button id="delete-button" onClick={deleteTasks}> X </button>
+            </li>
         
+        
+        
+        )}
       </ul>
     </div>
   );
